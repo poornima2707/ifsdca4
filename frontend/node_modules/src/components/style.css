@@ -1,0 +1,259 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Poppins:wght@300&display=swap');
+
+/* General reset and font settings */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(153, 123, 103); /* Primary color */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 75.5%;
+}
+
+/* Colors */
+body {
+    --secondary-color: rgb(255, 255, 255);
+    --dark-primary: #50372f;
+}
+
+/* Header styling */
+.header {
+    width: 100%;
+    height: 500px;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(bg1.png);
+    clip-path: circle(60% at left 300px);
+    z-index: -1;
+}
+.row2 {
+    position: absolute;
+    top: 10px;
+    right: 150px;
+    text-align: center;
+}
+.row2 h2 {
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.row2 img {
+    margin-top: 30px;
+    width: 250px;
+}
+.row1 h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-left: 35px;
+    font-family: 'Bodoni Moda', serif;
+}
+
+/* Search styling */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search input {
+    outline: none;
+    border: none;
+    width: 350px;
+    height: 35px;
+    padding: 0 0.5rem;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.search button {
+    outline: none;
+    border: none;
+    height: 35px;
+    padding: 0 0.5rem;
+    background-color: rgb(255, 255, 255);
+    color: rgb(153, 123, 103); /* Primary color */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.search button:hover {
+    background-color: #50372f; /* Dark primary */
+}
+
+/* Container styling */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+/* Card styling */
+.card {
+    background-color: rgb(255, 255, 255); /* Secondary color */
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+    text-align: center;
+    position: relative;
+}
+.card:hover {
+    transform: scale(0.95);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 1rem 1rem 0 0;
+}
+.card .bottom {
+    display: flex;
+    flex-direction: column;
+}
+.card .bottom .title {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+.card .bottom .amount {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgb(153, 123, 103); /* Primary color */
+    color: rgb(255, 255, 255); /* Secondary color */
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+/* Overlay styling */
+.overlay {
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay-inner {
+    background: white;
+    width: 700px;
+    height: 550px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.6rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.overlay-inner .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+.overlay-inner .inner-box {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay-inner .inner-box img {
+    margin-right: 2rem;
+    width: 150px;
+    height: 200px;
+}
+.overlay-inner .inner-box h3 {
+    margin-top: 1rem;
+    color: green;
+}
+.overlay-inner .inner-box h4 {
+    color: blue;
+}
+.overlay-inner .inner-box button {
+    outline: none;
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #24a0ed;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.overlay-inner .inner-box button:hover {
+    background-color: #1b83c6;
+}
+.overlay-inner .description {
+    margin-top: 2rem;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+/* Login and Register sections */
+.login, .register {
+    background-color: white;
+    width: 400px;
+    padding: 2rem;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    font-size: 1.6rem;
+    color: rgb(153, 123, 103); /* Primary color */
+}
+.login h2, .register h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: rgb(153, 123, 103); /* Primary color */
+    text-align: center;
+}
+.login input, .register input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #50372f; /* Dark primary */
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+.login button, .register button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    background-color: rgb(153, 123, 103); /* Primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.login button:hover, .register button:hover {
+    background-color: #50372f; /* Dark primary */
+}
